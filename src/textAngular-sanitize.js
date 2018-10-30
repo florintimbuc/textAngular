@@ -227,7 +227,7 @@ var htmlAttrs = makeMap('abbr,align,alt,axis,bgcolor,border,cellpadding,cellspac
     'color,cols,colspan,compact,coords,dir,face,headers,height,hreflang,hspace,'+
     'id,ismap,lang,language,nohref,nowrap,rel,rev,rows,rowspan,rules,'+
     'scope,scrolling,shape,size,span,start,summary,target,title,type,'+
-    'valign,value,vspace,width');
+    'valign,value,vspace,width,translate');
 
 // SVG attributes (without "id" and "name" attributes)
 // https://wiki.whatwg.org/wiki/Sanitization_rules#svg_Attributes
@@ -539,7 +539,7 @@ function validStyles(styleAttr){
             value === 'underline'
             || value === 'line-through'
         )
-      || 
+      ||
         key === 'font-weight' && (
             value === 'bold'
         )
